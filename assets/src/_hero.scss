@@ -1,0 +1,82 @@
+.hero {
+    background: url('../img/bg_hero.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 265px 0 215px;
+
+    &__body {
+        margin: 0 auto;
+        text-align: center;
+        width: $section-width;
+    }
+
+    &__heading {
+        @include text($font-main, $text-main, 48px, 700);
+        text-transform: uppercase;
+        letter-spacing: 4.8px;
+        margin: 0;
+    }
+
+    &__subheading {
+        @include text($font-main, $text-main, 22px, 300);
+        letter-spacing: 6.82px;
+        margin: 0 0 50px;
+        text-transform: capitalize;
+    }
+}
+
+.search-form {
+    @include flex();
+    justify-content: center;
+    width: 100%;
+    font-size: 0;
+    margin: 0 0 120px;
+
+    &__bar {
+        width: $section-width;
+        border: 0;
+        padding: 23px;
+
+        &::placeholder {
+            text-align: center;
+            @include text($font-main, $placeholder, 14px, 300);
+            letter-spacing: 2.8px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .button {
+        @include button($primary-color, $secondary-color);
+        @include flex-centered;
+    }
+}
+
+.scroll-down {
+    display: inline-block;
+
+    &__button {
+        @include text($font-main, $text-main, 14px, 300);
+        display: inline-block;
+        text-decoration: none;
+
+        &::after {
+            position: relative;
+            box-sizing: border-box;
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15px;
+            height: 15px;
+            top: 15px;
+            background: url('../img/icons/arrow-down.png') no-repeat center;
+        }
+
+        &:hover::after {
+            top: 20px;
+            transition: .2s;
+        }
+    }
+}

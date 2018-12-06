@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700");
+@font-face {
+  font-family: 'Aleo';
+  src: url("../fonts/aleo-regular/aleo-regular.eot");
+  src: url("../fonts/aleo-regular/aleo-regular.ttf") format("truetype"), url("../fonts/aleo-regular/aleo-regular.svg") format("svg"), url("../fonts/aleo-regular/aleo-regular.otf") format("opentype"), url("../fonts/aleo-regular/aleo-regular.woff") format("woff"), url("../fonts/aleo-regular/aleo-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+
+.hero {
+  background: url("../img/bg_hero.jpg") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  padding: 265px 0 215px; }
+  .hero__body {
+    margin: 0 auto;
+    text-align: center;
+    width: 60%; }
+  .hero__heading {
+    font-family: "Josefin Sans";
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    margin: 0; }
+  .hero__subheading {
+    font-family: "Josefin Sans";
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 6.82px;
+    margin: 0 0 50px;
+    text-transform: capitalize; }
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 0;
+  margin: 0 0 120px; }
+  .search-form__bar {
+    width: 60%;
+    border: 0;
+    padding: 23px; }
+    .search-form__bar::placeholder {
+      text-align: center;
+      font-family: "Josefin Sans";
+      color: #999999;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 2.8px; }
+    .search-form__bar:focus {
+      outline: none; }
+  .search-form .button {
+    font-family: "Aleo";
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    background-color: #5474fd;
+    cursor: pointer;
+    padding: 20px 25px;
+    width: 150px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .search-form .button:hover {
+      background-color: #496bfe; }
+    .search-form .button:focus {
+      outline: none; }
+    .search-form .button--search {
+      padding: 19px 25px;
+      border: 2px solid white; }
+      .search-form .button--search::after {
+        content: '';
+        background: url("../img/icons/search.png") no-repeat center;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 10px; }
+
+.scroll-down {
+  display: inline-block; }
+  .scroll-down__button {
+    font-family: "Josefin Sans";
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline-block;
+    text-decoration: none; }
+    .scroll-down__button::after {
+      position: relative;
+      box-sizing: border-box;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 15px;
+      height: 15px;
+      top: 15px;
+      background: url("../img/icons/arrow-down.png") no-repeat center; }
+    .scroll-down__button:hover::after {
+      top: 20px;
+      transition: .2s; }
