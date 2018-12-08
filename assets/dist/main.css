@@ -396,14 +396,14 @@
   display: flex;
   justify-content: center;
   align-items: center; }
+  .social-list__item:last-child .social-list__link {
+    margin-right: 0; }
   .social-list__link {
     color: white;
     text-decoration: none;
     margin-right: 25px; }
     .social-list__link:hover {
       color: #5474fd; }
-    .social-list__link:last-child {
-      margin-right: 0; }
 
 body {
   margin: 0;
