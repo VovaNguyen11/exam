@@ -47,36 +47,8 @@
     background-color: $color;
 }
 
-@mixin button($bg, $hover) {
-    @include text($font-alt, $text-main, 16px, 400);
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    background-color: $bg;
-    cursor: pointer;
-    padding: 20px 25px;
-    width: 150px;
-    border: 0;
-
-    &:hover {
-        background-color: $hover;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &--search {
-        padding: 19px 25px;
-        border: 2px solid white;
-
-        &::after {
-            content: '';
-            background: url('../img/icons/search.png') no-repeat center;
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            position: relative;
-            left: 10px;
-        }
+@mixin scr-mw($width) {
+    @media screen and (max-width: $width) {
+        @content;
     }
 }

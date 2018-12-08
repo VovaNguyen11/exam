@@ -1,12 +1,12 @@
 .hero {
     @include section-bg('../img/bg_hero.jpg');
     text-align: center;
-    padding: 265px 0 215px;
+    padding: 265px 0 140px;
 
     &__body {
         margin: 0 auto;
         text-align: center;
-        width: $section-width;
+        width: $xl;
     }
 
 }
@@ -16,11 +16,13 @@
     justify-content: center;
     width: 100%;
     font-size: 0;
-    margin: 0 0 120px;
+    margin: 0 0 115px;
+    box-sizing: border-box;
+    padding: 0 175px;
 
     &__input {
         @include text($font-main, $dark-grey, 20px, 400);
-        width: $section-width;
+        width: $search-width;
         border: 0;
         padding: 0 15px;
 
@@ -28,6 +30,7 @@
             text-align: center;
             @include text($font-main, $placeholder, 14px, 300);
             letter-spacing: 2.8px;
+            text-transform: capitalize;
         }
 
         &:focus {
@@ -36,41 +39,40 @@
     }
 }
 
-.button {
-    @include button($primary-color, $secondary-color);
-    @include flex-centered;
-    text-decoration: none;
-    position: relative;
-}
-
 .title {
     @include text($font-main, $text-main, 48px, 400);
     text-transform: uppercase;
-    letter-spacing: 4.8px;
+    letter-spacing: 3.5px;
     margin: 0;
-    &--header{
+
+    &--header {
         text-decoration: none;
         font-size: 24px;
         letter-spacing: 2.4px;
+        margin: 0;
+        padding: 0 20px;
     }
+
     &--footer {
         display: inline-block;
         text-decoration: none;
         font-size: 24px;
         letter-spacing: 3.36px;
-        margin: 0 0 15px 0;
+        margin: 0 0 8px 0;
+        padding: 0;
     }
 }
 
 .subtitle {
     @include text($font-main, $text-main, 22px, 300);
-    letter-spacing: 6.82px;
-    margin: 0 0 50px;
+    letter-spacing: 5.8px;
+    margin: 0 0 45px;
     text-transform: capitalize;
-    &--footer{
+
+    &--footer {
         font-size: 16px;
-        letter-spacing: 1.6px;
-        margin: 0 0 30px 0;
+        letter-spacing: 1px;
+        margin: 0 0 25px 0;
     }
 }
 
@@ -81,6 +83,7 @@
         @include text($font-main, $text-main, 14px, 300);
         display: inline-block;
         text-decoration: none;
+        letter-spacing: 2.3px;
 
         &::after {
             position: relative;
@@ -90,7 +93,7 @@
             margin: 0 auto;
             width: 15px;
             height: 15px;
-            top: 15px;
+            top: 7px;
             background: url('../img/icons/arrow-down.png') no-repeat center;
         }
 

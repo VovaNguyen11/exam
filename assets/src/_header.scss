@@ -1,10 +1,14 @@
 .header {
     background-color: $primary-color;
+    padding: 12px 0;
     &__container {
         margin: 0 auto;
-        width: $section-width;
+        width: $m;
         @include flex-between;
         align-items: center;
+        @include scr-mw(1280px){
+            width: 90%;
+        }
     }
 }
 
@@ -23,7 +27,7 @@
         text-transform: uppercase;
         text-decoration: none;
         display: inline-block;
-        padding: 20px;
+        padding: 20px 21px;
 
         &:hover {
             background-color: $secondary-color;

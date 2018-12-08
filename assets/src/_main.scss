@@ -22,7 +22,14 @@
 
     &__body {
         // padding: 0 30px;
-        width: $section-width;
+        padding: 0 5px;
+        box-sizing: border-box;
+        width: $s;
+
+        @include scr-mw(1280px) {
+            width: $xl;
+        }
+
         margin: 0 auto;
         @include flex();
         align-items: center;
@@ -35,6 +42,7 @@
             flex-wrap: wrap;
             justify-content: center;
         }
+
     }
 
     &__content {
@@ -43,7 +51,10 @@
         position: relative;
 
         &--overlay {
-            padding: 50px 30px;
+            flex-basis: calc(50% - 15px);
+            padding: 50px 27px 46px;
+            box-sizing: border-box;
+            margin: 0;
 
             &::before {
                 @include overlay(rgba(35, 35, 35, .9));
@@ -54,6 +65,7 @@
             box-sizing: border-box;
             padding: 10px 0;
             margin-right: 65px;
+            flex-basis: 60%;
         }
 
         &--fback {
@@ -61,11 +73,11 @@
             flex-basis: 60%;
             margin: 0;
             box-sizing: border-box;
-            padding: 50px 50px 50px 60px;
+            padding: 50px 50px 40px 60px;;
         }
 
         &-body {
-            @include flex();
+            @include flex-wrapped();
             justify-content: center;
         }
 
@@ -75,43 +87,73 @@
             &--features {
                 padding: 60px 0;
             }
+
+            &--fback{
+                margin-bottom: 38px;
+            }
         }
 
         &-supheading {
-            @include text($font-alt, $text-secondary, 20px, 400);
+            @include text($font-main, $text-secondary, 20px, 300);
             display: inline-block;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
         }
 
         &-heading {
             @include text($font-main, $text-main, 20px, 300);
             text-transform: uppercase;
-            margin: 0 0 25px;
+            margin: 0 0 20px;
+            letter-spacing: -0.5px;
 
             &--features {
                 @include text($font-alt, $text-main, 36px, 400);
                 text-transform: capitalize;
                 margin: 0;
+                letter-spacing: 0;
             }
 
             &--fback {
-                @extend .section__content-heading--features;
-                margin-bottom: 90px;
-                flex-basis: 100%;
-                text-align: center;
+                margin-bottom: 0;
             }
         }
 
         &-desc {
             @include text($font-main, $text-secondary, 16px, 300);
             line-height: 26px;
-            margin: 0 0 35px;
+            margin: 0 0 45px;
             position: relative;
+            letter-spacing: -0.6px;
 
             &--features {
                 position: relative;
-                letter-spacing: 1.6px;
+                letter-spacing: 1px;
+                margin: 0 0 35px;
             }
+
+            &--fback {
+                margin: 0;
+                text-indent: 30px;
+            }
+            
+            .fas{
+                position: absolute;
+                text-indent: -30px;
+                top: -12px;
+                color: $primary-color;
+                font-size: 20px;
+            }
+        }
+    }
+    
+    &__heading {
+        @extend .section__content-heading--features;
+        
+        &--fback {
+            flex-basis: 100%;
+            text-align: center;
+            letter-spacing: 0.6px;
+            margin-bottom: 90px;
         }
     }
 
@@ -120,6 +162,9 @@
 
         &--fback {
             flex-basis: 40%;
+            // @include screen-med(){
+            //     flex-basis: 60%;
+            // }
         }
 
         &::after {
@@ -154,17 +199,21 @@
 .steps {
     background-color: $dark-grey;
     padding: 0 0 120px;
-    box-sizing: border-box;
 
     &__body {
-        width: $section-width;
-        padding: 100px 0 0;
+        width: $s;
+        padding: 80px 70px 0;
+        box-sizing: border-box;
         margin: 0 auto;
         @include flex-between();
         text-align: center;
         position: relative;
         @include section-bg('../img/dot-lines.png');
         background-size: 85%;
+
+        @include scr-mw(1280px) {
+            width: $xl;
+        }
     }
 
     &__content {}
@@ -185,5 +234,6 @@
         display: block;
         @include text($font-alt, $text-secondary, 36px, 400);
         line-height: 26px;
+        text-transform: capitalize;
     }
 }
