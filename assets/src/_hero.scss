@@ -26,6 +26,14 @@
         border: 0;
         padding: 0 15px;
 
+        &:invalid {
+            border: 2px solid rgb(255, 119, 119);
+        }
+        
+        &:valid {
+            border: 2px solid rgb(145, 248, 145);
+        }
+
         &::placeholder {
             text-align: center;
             @include text($font-main, $placeholder, 14px, 300);

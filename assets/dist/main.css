@@ -72,6 +72,10 @@
     width: 65%;
     border: 0;
     padding: 0 15px; }
+    .search-form__input:invalid {
+      border: 2px solid #ff7777; }
+    .search-form__input:valid {
+      border: 2px solid #91f891; }
     .search-form__input::placeholder {
       text-align: center;
       font-family: "Josefin Sans";
