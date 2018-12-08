@@ -49,6 +49,9 @@
             @include scr-mw(1500px){
                 width: $m;
             }
+            @include scr-mw(1280px) {
+                width: $xl;
+            }
         }
 
     }

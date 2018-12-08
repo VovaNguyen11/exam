@@ -11,14 +11,17 @@
     list-style: none;
     @include flex-centered();
 
-    &__item:last-child &__link{
-        margin-right: 0;
+    &__item {
+        margin-right: 25px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 
     &__link {
         color: white;
         text-decoration: none;
-        margin-right: 25px;
 
         &:hover {
             color: $primary-color;
