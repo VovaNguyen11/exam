@@ -214,6 +214,9 @@
         @include scr-mw(1280px) {
             width: $xl;
         }
+        @include scr-mw(1280px) {
+            width: $xl;
+        }
     }
 
     &__content {}
