@@ -402,6 +402,8 @@
     margin-right: 25px; }
     .social-list__link:hover {
       color: #5474fd; }
+    .social-list__link:last-child {
+      margin-right: 0; }
 
 body {
   margin: 0;
