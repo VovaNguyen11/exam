@@ -209,7 +209,7 @@
         text-align: center;
         position: relative;
         @include section-bg('../img/dot-lines.png');
-        background-size: 85%;
+        background-size: 75%;
 
         @include scr-mw(1280px) {
             width: $xl;
