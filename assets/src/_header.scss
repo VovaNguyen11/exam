@@ -1,1 +1,32 @@
+.header {
+    background-color: $primary-color;
+    &__container {
+        margin: 0 auto;
+        width: $section-width;
+        @include flex-between;
+        align-items: center;
+    }
+}
 
+.nav {
+    &__list {
+        @include flex();
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__item {}
+
+    &__link {
+        @include text($font-alt, $text-main, 14px, 400);
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        padding: 20px;
+
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.footer {
+    padding: 120px 0 50px;
+    background-color: $dark-bg;
+    text-align: center;
+
+}
+
+.social-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include flex-centered();
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        margin-right: 25px;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}

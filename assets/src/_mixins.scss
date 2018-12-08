@@ -7,6 +7,11 @@
     flex-wrap: wrap;
 }
 
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
 @mixin flex-centered() {
     display: flex;
     justify-content: center;
@@ -25,14 +30,21 @@
     font-weight: $weight;
 }
 
-@mixin overlay($color, $opacity) {
+@mixin section-bg($url) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin overlay($color) {
+    content: '';
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     background-color: $color;
-    opacity: $opacity;
 }
 
 @mixin button($bg, $hover) {

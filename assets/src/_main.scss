@@ -1,0 +1,189 @@
+.section {
+    padding: 120px 0;
+
+    &--bg-castle {
+        @include section-bg('../img/bg_castle.jpg')
+    }
+
+    &--bg-hotel {
+        padding: 229px 0 100px;
+        @include section-bg('../img/bg_hotel.jpg');
+    }
+
+    &--bg-island {
+        padding: 229px 0 100px;
+        @include section-bg('../img/bg_island.jpg');
+    }
+
+    &--bg-fback {
+        padding-bottom: 200px;
+        @include section-bg('../img/bg_testimonials.jpg');
+    }
+
+    &__body {
+        // padding: 0 30px;
+        width: $section-width;
+        margin: 0 auto;
+        @include flex();
+        align-items: center;
+
+        &--right {
+            justify-content: flex-end;
+        }
+
+        &--fback {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        flex-basis: 50%;
+        margin: 0 30px 0 0;
+        position: relative;
+
+        &--overlay {
+            padding: 50px 30px;
+
+            &::before {
+                @include overlay(rgba(35, 35, 35, .9));
+            }
+        }
+
+        &--features {
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin-right: 65px;
+        }
+
+        &--fback {
+            background-color: $dark-grey;
+            flex-basis: 60%;
+            margin: 0;
+            box-sizing: border-box;
+            padding: 50px 50px 50px 60px;
+        }
+
+        &-body {
+            @include flex();
+            justify-content: center;
+        }
+
+        &-header {
+            position: relative;
+
+            &--features {
+                padding: 60px 0;
+            }
+        }
+
+        &-supheading {
+            @include text($font-alt, $text-secondary, 20px, 400);
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        &-heading {
+            @include text($font-main, $text-main, 20px, 300);
+            text-transform: uppercase;
+            margin: 0 0 25px;
+
+            &--features {
+                @include text($font-alt, $text-main, 36px, 400);
+                text-transform: capitalize;
+                margin: 0;
+            }
+
+            &--fback {
+                @extend .section__content-heading--features;
+                margin-bottom: 90px;
+                flex-basis: 100%;
+                text-align: center;
+            }
+        }
+
+        &-desc {
+            @include text($font-main, $text-secondary, 16px, 300);
+            line-height: 26px;
+            margin: 0 0 35px;
+            position: relative;
+
+            &--features {
+                position: relative;
+                letter-spacing: 1.6px;
+            }
+        }
+    }
+
+    &__preview {
+        flex-basis: 50%;
+
+        &--fback {
+            flex-basis: 40%;
+        }
+
+        &::after {
+            display: table;
+            content: '';
+            clear: both;
+        }
+
+        .preview__image {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 350px;
+
+            &--left {
+                float: left;
+                margin: 0 0 5px 0;
+            }
+
+            &--right {
+                float: right;
+            }
+
+            &--fback {
+                height: 100%;
+                max-width: none;
+            }
+        }
+    }
+}
+
+.steps {
+    background-color: $dark-grey;
+    padding: 0 0 120px;
+    box-sizing: border-box;
+
+    &__body {
+        width: $section-width;
+        padding: 100px 0 0;
+        margin: 0 auto;
+        @include flex-between();
+        text-align: center;
+        position: relative;
+        @include section-bg('../img/dot-lines.png');
+        background-size: 85%;
+    }
+
+    &__content {}
+
+    &__image-container {
+        margin: 0 auto;
+        @include flex-centered();
+        background-color: $dark-grey;
+        border-radius: 50%;
+        height: 96px;
+        width: 96px;
+        margin-bottom: 15px;
+    }
+
+    &__image {}
+
+    &__label {
+        display: block;
+        @include text($font-alt, $text-secondary, 36px, 400);
+        line-height: 26px;
+    }
+}

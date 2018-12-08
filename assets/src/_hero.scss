@@ -1,6 +1,5 @@
 .hero {
-    background: url('../img/bg_hero.jpg') no-repeat center;
-    background-size: cover;
+    @include section-bg('../img/bg_hero.jpg');
     text-align: center;
     padding: 265px 0 215px;
 
@@ -10,19 +9,6 @@
         width: $section-width;
     }
 
-    &__heading {
-        @include text($font-main, $text-main, 48px, 700);
-        text-transform: uppercase;
-        letter-spacing: 4.8px;
-        margin: 0;
-    }
-
-    &__subheading {
-        @include text($font-main, $text-main, 22px, 300);
-        letter-spacing: 6.82px;
-        margin: 0 0 50px;
-        text-transform: capitalize;
-    }
 }
 
 .search-form {
@@ -32,10 +18,11 @@
     font-size: 0;
     margin: 0 0 120px;
 
-    &__bar {
+    &__input {
+        @include text($font-main, $dark-grey, 20px, 400);
         width: $section-width;
         border: 0;
-        padding: 23px;
+        padding: 0 15px;
 
         &::placeholder {
             text-align: center;
@@ -47,10 +34,43 @@
             outline: none;
         }
     }
+}
 
-    .button {
-        @include button($primary-color, $secondary-color);
-        @include flex-centered;
+.button {
+    @include button($primary-color, $secondary-color);
+    @include flex-centered;
+    text-decoration: none;
+    position: relative;
+}
+
+.title {
+    @include text($font-main, $text-main, 48px, 400);
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    margin: 0;
+    &--header{
+        text-decoration: none;
+        font-size: 24px;
+        letter-spacing: 2.4px;
+    }
+    &--footer {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 24px;
+        letter-spacing: 3.36px;
+        margin: 0 0 15px 0;
+    }
+}
+
+.subtitle {
+    @include text($font-main, $text-main, 22px, 300);
+    letter-spacing: 6.82px;
+    margin: 0 0 50px;
+    text-transform: capitalize;
+    &--footer{
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        margin: 0 0 30px 0;
     }
 }
 
