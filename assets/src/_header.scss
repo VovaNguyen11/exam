@@ -3,9 +3,14 @@
     padding: 0;
     &__container {
         margin: 0 auto;
-        width: $m;
+        width: $s;
         @include flex-between;
         align-items: center;
+
+        @include scr-mw(1500px){
+            width: $m;
+        }
+
         @include scr-mw(1280px){
             width: 90%;
         }

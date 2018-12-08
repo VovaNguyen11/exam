@@ -18,6 +18,7 @@
     &--bg-fback {
         padding-bottom: 200px;
         @include section-bg('../img/bg_testimonials.jpg');
+        
     }
 
     &__body {
@@ -25,6 +26,10 @@
         padding: 0 5px;
         box-sizing: border-box;
         width: $s;
+
+        @include scr-mw(1500px){
+            width: $m;
+        }
 
         @include scr-mw(1280px) {
             width: $xl;
@@ -41,6 +46,9 @@
         &--fback {
             flex-wrap: wrap;
             justify-content: center;
+            @include scr-mw(1500px){
+                width: $m;
+            }
         }
 
     }
@@ -162,9 +170,9 @@
 
         &--fback {
             flex-basis: 40%;
-            // @include screen-med(){
-            //     flex-basis: 60%;
-            // }
+            @include scr-mw(1200px){
+                flex-basis: 60%;
+            }
         }
 
         &::after {
@@ -211,8 +219,8 @@
         @include section-bg('../img/dot-lines.png');
         background-size: 75%;
 
-        @include scr-mw(1280px) {
-            width: $xl;
+        @include scr-mw(1500px){
+            width: $m;
         }
         @include scr-mw(1280px) {
             width: $xl;
