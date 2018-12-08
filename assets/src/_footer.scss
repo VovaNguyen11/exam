@@ -19,5 +19,8 @@
         &:hover {
             color: $primary-color;
         }
+        &:last-child{
+            margin-right: 0;
+        }
     }
 }
